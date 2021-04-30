@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
 app.get("/:id", (req, res) => {
   const id = req.params.id;
   const user = data.find((item) => item.id === id);
-  res.status(200).send(user);
+  res.status(201).send(user);
 });
 
 app.listen(3000, () => console.log("server is running"));
