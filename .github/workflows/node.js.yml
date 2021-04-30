@@ -28,3 +28,13 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+    
+    - name: Build and Push docker Image
+      uses: mr-smithers-excellent/docker-build-push@v5
+      with:
+       image: mekarbal/docker_app_ci_cd
+       tags: v1, latest
+       registry: registry-url.io
+       dockerfile: Dockerfile.ci
+       username: ${{ secrets.DOCKER_USERNAME_APP }}
+       password: ${{ secrets.DOCKER_PASSWORD_APP}}
