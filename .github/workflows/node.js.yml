@@ -29,7 +29,7 @@ jobs:
        image: mekarbal/docker_app_ci_cd
        tags: v1, latest
        dockerfile: Dockerfile.ci
-       registry: docker.pkg.github.com
+       registry: https://hub.docker.com/repository/docker/mekarbal/docker_app_ci_cd
        repository: ${{ secrets.DOCKER_USERNAME_APP }}/docker_app_ci_cd
        username: ${{ secrets.DOCKER_USERNAME_APP }}
        password: ${{ secrets.DOCKER_PASSWORD_APP}}
