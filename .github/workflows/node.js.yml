@@ -28,7 +28,6 @@ jobs:
       with:
        image: mekarbal/docker_app_ci_cd
        tags: v1, latest
-       registry: registry-url.io
        dockerfile: Dockerfile.ci
        repository: ${{ secrets.DOCKER_USERNAME_APP }}/docker_app_ci_cd
        username: ${{ secrets.DOCKER_USERNAME_APP }}
