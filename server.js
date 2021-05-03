@@ -14,4 +14,5 @@ app.get("/:id", (req, res) => {
   res.status(201).send(user);
 });
 
-app.listen(3000, () => console.log("server is running"));
+app.listen(3000, () => console.log("server run"));
+module.exports = app;
