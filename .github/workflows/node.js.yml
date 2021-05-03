@@ -26,7 +26,8 @@ jobs:
     - name: Build and Push docker Image
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
-       image: mekarbal/docker_app_ci_cd
+       image: mekarbal/docker_app_ci_cd       
+       registry: mekarbal/docker_app_ci_cd  
        tags: v1, latest
        dockerfile: Dockerfile.ci
        username: ${{ secrets.DOCKER_USERNAME_APP }}
