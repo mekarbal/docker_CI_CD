@@ -15,3 +15,4 @@ app.get("/:id", (req, res) => {
 });
 
 app.listen(3000, () => console.log("server run"));
+module.exports = app;
